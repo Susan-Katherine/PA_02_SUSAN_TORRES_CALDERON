@@ -1,5 +1,5 @@
 :root {
-  --color-principal: #1a500f;
+  --color-principal: #0f1e50;
   --color-fondo: #f3e5f5;
   --color-acento: #ffca28;
   --fuente-base: Arial, sans-serif;
@@ -107,14 +107,24 @@ section img:hover {
   background-color: #df9036;
   border-left: 6px solid var(--color-principal);
   padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+
 }
 
 .caja-cultura img {
   margin-top: 10px;
   border-radius: 8px;
+  transition: transform 0.4s ease; /* animación más suave */
 }
+
+.caja-cultura img:hover {
+  transform: scale(1.05); /* crecimiento suave */
+}
+
+
+
 .tarjetas {
   display: flex;
   justify-content: center;
@@ -125,7 +135,7 @@ section img:hover {
 
 .tarjeta {
   width: 250px;
-  background-color: #2fa8db;
+  background-color: #44bdf1;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -142,8 +152,8 @@ section img:hover {
 }
 
 .tarjeta:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+   transform: scale(1.05);
+   box-shadow: 0 0 20px 8px #1a01ff;
 }
 
 footer {
@@ -153,7 +163,7 @@ footer {
   margin-top: 20px;
 }
 #registro {
-  background-color: #fa39e0;
+  background-color: #c0c0c0;
   padding: 30px;
   border-radius: 10px;
   max-width: 600px;
@@ -205,4 +215,560 @@ footer {
 
 #registro button:hover {
   background-color: var(--color-acento);
+}
+
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-principal);
+  color: white;
+  font-size: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.animado-svg {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    fill: #ff6f61;
+  }
+  50% {
+    transform: scale(1.2);
+    fill: #ffca28;
+  }
+  100% {
+    transform: scale(1);
+    fill: #ff6f61;
+  }
+}
+.galeria-festividades {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.animado-svg {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    fill: #ff6f61;
+  }
+  50% {
+    transform: scale(1.2);
+    fill: #ffca28;
+  }
+  100% {
+    transform: scale(1);
+    fill: #ff6f61;
+  }
+}
+.contenedor-imagenes {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start; /* 👈 esta línea es la que te falta */
+}
+
+
+.contenedor-imagenes figure,
+.contenedor-imagenes div {
+  flex: 1 1 300px;
+}
+.contenedor-imagenes img {
+  transition: transform 0.5s ease;
+}
+
+.contenedor-imagenes img:hover {
+  transform: translateY(-10px);
+}
+.bloque-festividad {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto; /* centra cada cuadro */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloque-festividad:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.bloque-festividad img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.bloque-festividad figcaption {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cuadro-origen {
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #fecfd7; /* rosa más fuerte */
+  border-radius: 8px;
+  font-size: 14px;
+  color: #ff0000;
+  border: 2px solid #ff0080; /* borde más intenso */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* CÍRCULO CENTRAL DEL SOL */
+.sol-central {
+  fill: #f2ff00; /* Amarillo bonito */
+}
+
+/* RAYOS DEL SOL */
+.rayos-sol {
+  animation: rayos-rotate 5s infinite linear;
+  transform-origin: center;
+}
+
+/* CADA RAYO (LINEA) DEL SOL */
+.rayos-sol line {
+  stroke: #FFD93B; /* Amarillo igual que el centro */
+  stroke-width: 4;
+}
+
+/* ANIMACIÓN DE ROTACIÓN DE LOS RAYOS */
+@keyframes rayos-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.contenedor-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.bloque-festividad {
+  width: 300px;
+  border: 3px solid #ff69b4; /* borde rosado */
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #fffaf0; /* crema claro */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloque-festividad:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px 8px rgb(255, 105, 180); /* sombra rosa fuerte */
+}
+
+.bloque-festividad img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.bloque-festividad figcaption {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #b30059;
+  text-align: center;
+}
+
+.cuadro-origen {
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #ffe0f0; /* rosado claro */
+  border-radius: 8px;
+  font-size: 14px;
+  color: #ff0000;
+  border: 2px solid #ff0080;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sol-en-header {
+  width: 50px;
+  height: 50px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* ya tienes estas clases definidas: */
+.sol-central {
+  fill: #FFD93B;
+}
+
+.rayos-sol {
+  animation: rayos-rotate 5s infinite linear;
+  transform-origin: center;
+}
+
+.rayos-sol line {
+  stroke: #FFD93B;
+  stroke-width: 4;
+}
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sol-en-header {
+  width: 50px;
+  height: 50px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.sol-central {
+  fill: #FFD93B;
+}
+
+.rayos-sol {
+  animation: rayos-rotate 5s infinite linear;
+  transform-origin: center;
+}
+
+.rayos-sol line {
+  stroke: #FFD93B;
+  stroke-width: 4;
+}
+
+@keyframes rayos-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.cuadro-origen-gastro {
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #6046a3;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #ffffff;
+  border: 2px solid #ff0080;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación de rotación de los rayos */
+@keyframes rayos-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 600px) {
+  .sol-esquina {
+    display: none;
+  }
+}
+.tarjetainicio {
+  width: 250px;
+  background-color: #ff0000;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgb(0, 0, 0);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tarjetainicio:hover {
+   transform: scale(1.05);
+   box-shadow: 0 0 20px 8px #ff0000;
+}
+/* ====== Sección portada (foto grande) ====== */
+#portada img {
+  width: 100%; /* Que ocupe todo el ancho */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+
+
+
+#resena, #por-que-visitar {
+  background-color: #e0f7fa; /* celeste suave */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+/* Título de sección */
+#resena h2, #por-que-visitar h2 {
+  color: #1a500f;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* Imagen en la sección "Por qué visitar" */
+#por-que-visitar img {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Secciones de portada, reseña y por qué visitar */
+#resena h2,
+#por-que-visitar h2 {
+  color: #20b402de; /* verde oscuro (como tu tema) */
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#resena p,
+#por-que-visitar p {
+  font-size: 16px;
+  line-height: 1.6; /* espacio entre líneas bonito */
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+#resena img,
+#por-que-visitar img {
+  width: 100%; /* que ocupe todo el ancho del cuadro */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+#resena img:hover,
+#por-que-visitar img:hover {
+  transform: scale(1.05); /* efecto de zoom suave */
+    box-shadow: 0 0 20px 8px rgb(65, 65, 65);
+}
+body.festividades .encabezado {
+  background-color: #6a0dad; /* morado */
+}
+
+body.gastronomia .encabezado {
+  background-color: #c40000; /* rojo */
+}
+/* ====== TESTIMONIOS ====== */
+#testimonios {
+  background-color: #f8f8ff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#testimonios h2 {
+  color: #0f1e50;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.contenedor-testimonios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.tarjeta-testimonio {
+  background-color: #ffffff;
+  border: 2px solid #0f1e50;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-testimonio img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #ffca28;
+}
+
+.tarjeta-testimonio p {
+  font-style: italic;
+  color: #555;
+}
+
+.tarjeta-testimonio h4 {
+  margin-top: 10px;
+  color: #0f1e50;
+  font-size: 16px;
+}
+
+.tarjeta-testimonio:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Video */
+.video-testimonio h3,
+.mapa-testimonio h3 {
+  font-size: 24px;
+  color: #0f1e50;
+  margin-bottom: 15px;
+}
+
+.video-testimonio iframe,
+.mapa-testimonio iframe {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+html {
+  scroll-behavior: smooth;
+}
+.linea-separadora {
+  border: none;
+  height: 2px;
+  background-color: rgb(183, 0, 255);
+  margin: 20px 0;
+}
+#resena {
+  background-color: transparent; /* SIN FONDO */
+  box-shadow: none;              /* SIN SOMBRA */
+  padding: 20px; /* opcional si quieres mantener espacio interno */
+}
+#resena, 
+#por-que-visitar {
+  background-color: transparent; /* SIN FONDO */
+  box-shadow: none;              /* SIN SOMBRA */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+#resena p,
+#por-que-visitar p {
+  font-size: 20px;  /* MÁS GRANDE */
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#por-que-visitar img {
+  width: 80%; /* un poco más pequeña */
+  display: block;
+  margin: 0 auto; /* para que quede centrada */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+#imgportada {
+  width: 150%; /* un poco más pequeña */
+  display: block;
+  margin: 0 auto; /* para que quede centrada */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+
+}
+#resena img {
+  width: 120%; /* un poco más pequeña */
+  display: block;
+  margin: 0 auto; /* para que quede centrada */
+  border-radius: 25px;
+  transition: transform 0.3s ease;
+
+text-align: center;
+position: relative; 
+left:-90px;
+
+}
+#resena h2{
+  font-size: 45px;
+  text-align: center;
+  color: #333;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+}
+
+
+#por-que-visitar h2{
+  font-size: 45px;
+  text-align: center;
+  color: #333;
+  font-family: cursive;
+  font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  position: relative;
+  display: inline-block; /* Para que queden en línea */
+}
+
+.menu ul li ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.menu ul li:hover ul {
+  display: block;
+}
+
+.menu a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  background-color: #074213;
+  color: #fff;
+}
+
+.menu ul li ul li a {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.menu ul li ul li a:hover {
+  background-color: #ffffff;
 }
