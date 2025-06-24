@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+  
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gastronomía | Conociendo Cusco</title>
-  <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="/estilos/estilos.css" />
 </head>
+
 <body class="gastronomia"> 
 <header class="encabezado">
   <div class="contenedor-header">
@@ -43,51 +45,76 @@
     </div>
   </div>
 </header>
-
 <main>
   <section>
     <h2>Gastronomía típica del Cusco</h2>
     <p>Descubre los sabores tradicionales de la región andina y los platos más representativos de Cusco.</p>
   </section>
-
   <section class="tarjetas">
     <!-- Plato 1 -->
     <div class="tarjeta">
       <img src="imagenes/cuychactao.jpg" alt="Cuy chactado">
       <p class="cuadro-origen-gastro"><strong>Cuy chactado:</strong>Cuy chactado: Plato emblemático de la gastronomía cusqueña. El cuy, animal ancestralmente valorado en los Andes, se fríe hasta quedar crujiente y dorado. Se sirve acompañado de papas, mote y ají. Su consumo tiene raíces rituales y sociales en las comunidades altoandinas.
+        <b><p style="text-align: center;">Cuy chactado: s/85</p></b>
+            <button onclick="agregarAlCarrito('Cuy chactado', 85)">Agregar plato</button>
+
 </p>
     </div>
-
     <!-- Plato 2 -->
     <div class="tarjeta">
       <img src="imagenes/chiriuchu.jpg" alt="Chiri Uchu">
       <p class="cuadro-origen-gastro"><strong>Chiri Uchu:</strong>Considerado el plato bandera de las festividades de Cusco, especialmente del Corpus Christi. Su nombre significa "ají frío". Reúne ingredientes de diversas altitudes: gallina, charqui, cuy, queso, chorizo, tortilla de maíz, cochayuyo y huevera. Su riqueza de sabores simboliza la diversidad del territorio cusqueño.+</p>
+      <b><p style="text-align: center;">Chiri Uchu: s/28</p></b>
+            <button onclick="agregarAlCarrito('Chiri Uchu', 28)">Agregar plato</button>
     </div>
-
     <!-- Plato 3 -->
     <div class="tarjeta">
       <img src="imagenes/capchi-de-habas.jpg" alt="Kapchi de habas">
       <p class="cuadro-origen-gastro"><strong>Kapchi de habas:</strong> Preparación ancestral de la época de lluvias. Consiste en habas frescas cocinadas con leche, queso, papas y huacatay, lo que le aporta un aroma especial. Es un plato ligero y nutritivo, ideal como entrada o para acompañar almuerzos típicos en Cusco.</p>
+       <b><p style="text-align: center;">Kapchi de habas: s/32</p></b>
+            <button onclick="agregarAlCarrito('Kapchi de habas', 32)">Agregar plato</button>
     </div>
-
     <!-- Plato 4 -->
     <div class="tarjeta">
       <img src="imagenes/rocotorelleno.jpeg" alt="Rocoto relleno">
       <p class="cuadro-origen-gastro"><strong>Rocoto relleno:</strong>Tradicional plato heredado de la cocina mestiza del sur del Perú. El rocoto, un ají grande y picante, se rellena con carne picada, verduras y especias, luego se gratina con queso en horno. Es una explosión de sabores intensos, muy apreciada en las picanterías cusqueñas.</p>
+      <b><p style="text-align: center;">Rocoto relleno: s/18</p></b>
+            <button onclick="agregarAlCarrito('Rocoto relleno', 18)">Agregar plato</button>
     </div>
-
     <!-- Plato 5 -->
     <div class="tarjeta">
       <img src="imagenes/adocuqueno.jpg" alt="adobo ">
       <p class="cuadro-origen-gastro">
         <strong>adobo:</strong>
          Tradicional plato cusqueño preparado con carne de cerdo marinada en chicha de jora, ají panca y especias, cocido lentamente hasta lograr un sabor intenso y aromático. Se sirve caliente, ideal para los desayunos dominicales en Cusco.</p>
+         <b><p style="text-align: center;">adobo: s/25</p></b>
+            <button onclick="agregarAlCarrito('adobo', 25)">Agregar plato</button>
     </div>
   </section>
 </main>
-
 <footer>
   <p>© 2025 Conociendo Cusco. Todos los derechos reservados.</p>
 </footer>
+<div id="iconoCarrito" onclick="alternarCarrito()">
+  <img src="imagenes/carrito.png" alt="Carrito" width="40" height="40">
+</div>
 
+<!-- Carrito flotante -->
+<div id="carrito" class="cerrado">
+  <ul id="lista-carrito"></ul>
+  <p>tu carrito de compra </p>
+  <p>Total: S/ <span id="total">0.00</span></p>
+  <button onclick="vaciarCarrito()">Vaciar carrito</button>
+  <button onclick="finalizarCompra()">Finalizar compra</button>
+</div>
+<!-- Popup para mensajes -->
+<div id="popup" class="oculto">
+  <div id="popup-mensaje"></div>
+</div>
+
+<!-- Enlace al JS -->
+<script src="js/carrito.js"></script>
+
+
+</body>
 </html>

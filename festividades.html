@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Festividades tradicionales de Cusco" />
   <meta name="keywords" content="Cusco, festividades, Inti Raymi, Corpus Christi, Pachamama, turismo" />
   <meta name="author" content="Tu Nombre" />
-  <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="/estilos/estilos.css" />
   <title>Festividades | Conociendo Cusco</title>
 </head>
-<body class="festividades">
- 
 
+<body class="festividades">
+  
 <header class="encabezado">
   <div class="contenedor-header">
    <nav class="menu">
@@ -47,12 +48,9 @@
     </g>
   </svg>
 </div>
-
   </div>
 </header>
-
 <main>
-
 <section class="galeria-festividades">
   <h2>Principales festividades del Cusco</h2>
 
@@ -65,6 +63,11 @@
       <div class="cuadro-origen">
        <b> <p>El Inti Raymi fue instaurado por el Inca Pachacútec en el siglo XV. Su propósito era rendir homenaje al Sol en el solsticio de invierno, momento clave para la agricultura. Era una ocasión para agradecer al Inti por las cosechas y pedir su protección para el nuevo ciclo agrícola.</p></b>
       </div>
+      <b><p style="text-align: center;">Inti Raymi: s/185</p></b>
+            <button onclick="agregarAlCarrito('Inti Raymi', 185)">Agregar festividad</button>
+
+</figure>
+      
     </figure>
 
     <!-- 2 - Corpus Christi -->
@@ -74,6 +77,8 @@
       <div class="cuadro-origen">
         <b><p>Es una fiesta católica que se celebra en muchos países. Su origen viene de Europa, en el siglo XIII, cuando la Iglesia instituyó la celebración para rendir culto público a la Eucaristía (el cuerpo de Cristo).</p></b>
       </div>
+      <b><p style="text-align: center;">Corpus Christi: s/485</p></b>
+            <button onclick="agregarAlCarrito('Corpus Christi', 485)">Agregar festividad</button>
     </figure>
 
     <!-- 3 - Bajada de Reyes -->
@@ -83,6 +88,8 @@
       <div class="cuadro-origen">
        <b> <p>Es una festividad cristiana que celebra la llegada de los Reyes Magos al pesebre de Jesús. Su origen es bíblico y la Iglesia la celebra desde los primeros siglos del cristianismo.</p></b>
       </div>
+      <b><p style="text-align: center;">Bajada de Reyes: s/350</p></b>
+            <button onclick="agregarAlCarrito('Bajada de Reyes', 350)">Agregar festividad</button>
     </figure>
 
     <!-- 4 - Carnavales en Cusco -->
@@ -92,6 +99,8 @@
       <div class="cuadro-origen">
        <b> <p>Mucho antes de la llegada de los españoles, los pueblos andinos (incluidos los incas) ya realizaban fiestas agrícolas vinculadas al ciclo de la naturaleza.</p></b>
       </div>
+      <b><p style="text-align: center;">Carnavales: s/320</p></b>
+            <button onclick="agregarAlCarrito('Carnavales', 320)">Agregar festividad</button>
     </figure>
 
     <!-- 5 - Fiesta a la Pachamama -->
@@ -101,23 +110,36 @@
       <div class="cuadro-origen">
         <b><p>La Pachamama (Madre Tierra) es una de las deidades más importantes de la cosmovisión andina, mucho antes de la llegada de los españoles.</p></b>
       </div>
+      <b><p style="text-align: center;">Pachamama: s/255</p></b>
+            <button onclick="agregarAlCarrito('Pachamama', 255)">Agregar festividad</button>
     </figure>
-
   </div>
 </section>
-
-
 <section class="emblema-sol">
-  
-
-
 </section>
-
 </main>
-
 <footer>
   <p>© 2025 Conociendo Cusco. Todos los derechos reservados.</p>
 </footer>
+<div id="iconoCarrito" onclick="alternarCarrito()">
+  <img src="imagenes/carrito.png" alt="Carrito" width="40" height="40">
+</div>
+
+<!-- Carrito flotante -->
+<div id="carrito" class="cerrado">
+  <ul id="lista-carrito"></ul>
+  <p>tu carrito de compra </p>
+  <p>Total: S/ <span id="total">0.00</span></p>
+  <button onclick="vaciarCarrito()">Vaciar carrito</button>
+  <button onclick="finalizarCompra()">Finalizar compra</button>
+</div>
+<!-- Popup para mensajes -->
+<div id="popup" class="oculto">
+  <div id="popup-mensaje"></div>
+</div>
+
+<!-- Enlace al JS -->
+<script src="js/carrito.js"></script>
 
 </body>
 </html>
